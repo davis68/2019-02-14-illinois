@@ -2,19 +2,19 @@
 layout: workshop      # DON'T CHANGE THIS.
 carpentry: "swc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
 venue: "University of Illinois"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "1030 National Center for Supercomputing Applications"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+address: "1040 National Center for Supercomputing Applications"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "40.1149832,-88.2271851"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
-humandate: "Feb 7–8, 2019"  # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humandate: "Feb 14–15, 2019"  # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "9:00 am - 4:30 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: 2019-02-07      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2019-02-08        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Madicken Munck","Lindsay Clark"] # boxed, comma-separated list of instructors' names as strings
+startdate: 2019-02-14      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2019-02-15        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Stuti Shrivastava"] # boxed, comma-separated list of instructors' names as strings
 helper: []     # boxed, comma-separated list of helpers' names
 email: ["training@cse.illinois.edu"]    # boxed, comma-separated list of contact email addresses for the host
 collaborative_notes: "http://pad.software-carpentry.org/2019-02-07-illinois"            # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
-eventbrite: "53441740685"          # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+eventbrite: "53441690535"          # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -222,9 +222,6 @@ eventbrite: "53441740685"          # optional: alphanumeric key for Eventbrite r
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
   We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
-</p>
-<p>
-  Supplementary materials for the workshop are available at <a href="https://go.illinois.edu/dc-genomics-supp">go.illinois.edu/dc-genomics-supp</a>.
 </p>
 {% endif %}
 
@@ -505,95 +502,95 @@ eventbrite: "53441740685"          # optional: alphanumeric key for Eventbrite r
   </div>
 </div> {% comment %} End of 'editor' section. {% endcomment %}
 
-<div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
-  <h3>R</h3>
+<div id="python"> {% comment %} Start of 'Python' section. Remove the third paragraph if
+           the workshop will teach Python using something other than
+           the Jupyter notebook.
+           Details at https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility {% endcomment %}
+  <h3>Python</h3>
 
   <p>
-    <a href="https://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
-    <a href="https://www.rstudio.com/">RStudio</a>.
+    <a href="https://python.org">Python</a> is a popular language for
+    research computing, and great for general-purpose programming as
+    well.  Installing all of its research packages individually can be
+    a bit difficult, so we recommend
+    <a href="https://www.anaconda.com/distribution/">Anaconda</a>,
+    an all-in-one installer.
   </p>
+
+    <p>
+      Regardless of how you choose to install it,
+      <strong>please make sure you install Python version 3.x</strong>
+      (e.g., 3.6 is fine).
+    </p>
+
+    <p>
+      We will teach Python using the <a href="https://jupyter.org/">Jupyter notebook</a>,
+      a programming environment that runs in a web browser. For this to work you will need a reasonably
+      up-to-date browser. The current versions of the Chrome, Safari and
+      Firefox browsers are all
+      <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
+      (some older browsers, including Internet Explorer version 9
+      and below, are not).
+    </p>
 
   <div class="row">
     <div class="col-md-4">
-      <h4 id="r-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
-      <p>
-        Install R by downloading and running
-        <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the 
-        installers as administrator (right-click on .exe file and select "Run as 
-        administrator" instead of double-clicking). Otherwise problems may occur later, 
-        for example when installing R packages.
-      </p>
+      <h4 id="python-windows">Windows</h4>
+      <a href="https://www.youtube.com/watch?v=xxQ0mzZ8UvA">Video Tutorial</a>
+      <ol>
+        <li>Open <a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a> with your web browser.</li>
+        <li>Download the Python 3 installer for Windows.</li>
+        <li>Install Python 3 using all of the defaults for installation <em>except</em> make sure to check <strong>Make Anaconda the default Python</strong>.</li>
+      </ol>
     </div>
     <div class="col-md-4">
-      <h4 id="r-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
-      <p>
-        Install R by downloading and running
-        <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-      </p>
+      <h4 id="python-macosx">macOS</h4>
+      <a href="https://www.youtube.com/watch?v=TcSAln46u9U">Video Tutorial</a>
+      <ol>
+        <li>Open <a href="https://www.anaconda.com/download/#macos">https://www.anaconda.com/download/#macos</a> with your web browser.</li>
+        <li>Download the Python 3 installer for OS X.</li>
+        <li>Install Python 3 using all of the defaults for installation.</li>
+      </ol>
     </div>
     <div class="col-md-4">
-      <h4 id="r-linux">Linux</h4>
-      <p>
-        You can download the binary files for your distribution
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>. Or
-        you can use your package manager (e.g. for Debian/Ubuntu
-        run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo dnf install R</code>).  Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-      </p>
+      <h4 id="python-linux">Linux</h4>
+      <ol>
+        <li>Open <a href="https://www.anaconda.com/download/#linux">https://www.anaconda.com/download/#linux</a> with your web browser.</li>
+        <li>Download the Python 3 installer for Linux.<br>
+          (The installation requires using the shell. If you aren't
+           comfortable doing the installation yourself
+           stop here and request help at the workshop.)
+        </li>
+        <li>
+          Open a terminal window.
+        </li>
+        <li>
+          Type <pre>bash Anaconda3-</pre> and then press
+          tab. The name of the file you just downloaded should
+          appear. If it does not, navigate to the folder where you
+          downloaded the file, for example with:
+          <pre>cd Downloads</pre>
+          Then, try again.
+        </li>
+        <li>
+          Press enter. You will follow the text-only prompts. To move through
+          the text, press the space key. Type <code>yes</code> and
+          press enter to approve the license. Press enter to approve the
+          default location for the files. Type <code>yes</code> and
+          press enter to prepend Anaconda to your <code>PATH</code>
+          (this makes the Anaconda distribution the default Python).
+        </li>
+        <li>
+          Close the terminal window.
+        </li>
+      </ol>
     </div>
   </div>
-</div> {% comment %} End of 'R' section. {% endcomment %}
-
-<div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
-  <h3>SQLite</h3>
-
+{% comment %}
   <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="https://www.sqlite.org/">SQLite</a> in our lessons.
+  Once you are done installing the software listed above,
+  please go to <a href="setup/index.html">this page</a>,
+  which has instructions on how to test that everything was installed correctly.
   </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="sql-windows">Windows</h4>
-      <p>
-        The <a href="https://github.com/swcarpentry/windows-installer/releases/tag/v0.3">
-          {% if page.carpentry == "swc" %}
-          Software Carpentry
-          {% elsif page.carpentry == "dc" %}
-          Data Carpentry
-          {% elsif page.carpentry == "lc" %}
-          Library Carpentry
-          {% endif %}
-          Windows Installer
-	</a>
-        installs SQLite for Windows.
-        If you used the installer to configure nano, you don't need to run it again.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-macosx">macOS</h4>
-      <p>
-        SQLite comes pre-installed on macOS.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-linux">Linux</h4>
-      <p>
-        SQLite comes pre-installed on Linux.
-      </p>
-    </div>
-  </div>
-</div> {% comment %} End of 'SQLite' section. {% endcomment %}
+{% endcomment %}
+</div> {% comment %} End of 'Python' section. {% endcomment %}
